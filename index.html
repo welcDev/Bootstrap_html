@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Mon site avec bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Profil</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal"
+                            data-bs-target="#inscriptionModal">Inscription</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal"
+                            data-bs-target="#connexionModal">Connexion</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Modal insceiption -->
+    <div class="modal fade" id="inscriptionModal" tabindex="-1" aria-labelledby="inscriptionModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="inscriptionModalLabel">Inscription</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="">
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="register-email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="register-email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="register-password" class="form-label">Mot de passe</label>
+                            <input type="password" class="form-control" id="register-password">
+                        </div>
+                        <div class="mb-3">
+                            <label for="register-retype-password" class="form-label">Retaper son mot de passe</label>
+                            <input type="password" class="form-control" id="register-retype-password">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                            id="register-button">Envoyer</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Modal connexion -->
+    <div class="modal fade" id="connexionModal" tabindex="-1" aria-labelledby="connexionModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="connexionModalLabel">Connexion</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="">
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="login-email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="login-email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="login-password" class="form-label">Mot de passe</label>
+                            <input type="password" class="form-control" id="login-password">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                            id="login-button">Envoyer</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Classe row -->
+    <div class="row">
+        <div class="col-6 col-md-4 d-flex">
+            <div class="card" style="width: 18rem;">
+                <img src="./img/lion.jpg" class="card-img-top" alt="lion">
+                <div class="card-body">
+                    <h5 class="card-title">Le lion</h5>
+                    <p class="card-text">Le Lion est une espèce de mammifères carnivores de la famille
+                        des Félidés. La femelle du lion est la lionne, son petit est le lionceau. Son espérance de vie
+                        est de
+                        15-16 ans pour une femelle adulte à l'état sauvage pour un poid de 130kg, de 8-10 ans pour un
+                        mâle
+                        à l'état sauvage pour un de 190kg.
+                    </p>
+                    <a href="#" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#lionModal">Voir le
+                        lion</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-4 d-flex">
+            <div class="card" style="width: 18rem;">
+                <img src="./img/panthere.jpg" class="card-img-top" alt="panthère">
+                <div class="card-body">
+                    <h5 class="card-title">La panthère</h5>
+                    <p class="card-text">La Panthère ou le Léopard est une espèce de félins
+                        de la sous-famille des panthérinés. Ce félin présente un pelage fauve tacheté
+                        de rosettes ; une forme mélanique existe également.</p>
+                    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#panthereModal">Voir la
+                        panthère</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-4 d-flex">
+            <div class="card" style="width: 18rem;">
+                <img src="./img/tigre.jpg" class="card-img-top" alt="tigre">
+                <div class="card-body">
+                    <h5 class="card-title">Le tigre</h5>
+                    <p class="card-text">Le Tigre est une espèce de mammifère carnivore de la famille des félidés
+                        du genre Panthera. Aisément reconnaissable à sa fourrure rousse rayée de noir,
+                        c'est le plus grand félin sauvage et l'un des plus grands carnivores terrestres,
+                        dépassé seulement par les plus grandes espèces d'ours.</p>
+                    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tigreModal">Voir le
+                        tigre</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal lion -->
+    <div class="modal fade" id="lionModal" tabindex="-1" aria-labelledby="lionModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="lionModalLabel">Le lion</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="lionCarousel" class="carousel slide" data-bs-ride="carousel">
+
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#lionCarousel" data-bs-slide-to="0" class="active"
+                                aria-current="true" aria-label="Image 1"></button>
+                            <button type="button" data-bs-target="#lionCarousel" data-bs-slide-to="1"
+                                aria-label="Image 2"></button>
+                            <button type="button" data-bs-target="#lionCarousel" data-bs-slide-to="2"
+                                aria-label="Image 3"></button>
+                        </div>
+
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./img/lion_1.avif" class="d-block w-100" alt="Lion 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/lion_2.avif" class="d-block w-100" alt="Lion 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/lion_3.jpg" class="d-block w-100" alt="Lion 3">
+                            </div>
+                        </div>
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#lionCarousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#lionCarousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal panthère -->
+    <div class="modal fade" id="panthereModal" tabindex="-1" aria-labelledby="panthereModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="panthereModalLabel">La panthère</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="panthereCarousel" class="carousel slide" data-bs-ride="carousel">
+
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#panthereCarousel" data-bs-slide-to="0" class="active"
+                                aria-current="true" aria-label="Image 1"></button>
+                            <button type="button" data-bs-target="#panthereCarousel" data-bs-slide-to="1"
+                                aria-label="Image 2"></button>
+                            <button type="button" data-bs-target="#panthereCarousel" data-bs-slide-to="2"
+                                aria-label="Image 3"></button>
+                        </div>
+
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./img/panthere_1.jpg" class="d-block w-100" alt="Panthère 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/panthere_2.jpg" class="d-block w-100" alt="Panthère 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/panthere_3.jpg" class="d-block w-100" alt="Panthère 3">
+                            </div>
+                        </div>
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#panthereCarousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#panthereCarousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal tigre -->
+    <div class="modal fade" id="tigreModal" tabindex="-1" aria-labelledby="tigreModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="tigreModalLabel">La tigre</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="tigreCarousel" class="carousel slide" data-bs-ride="carousel">
+
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#tigreCarousel" data-bs-slide-to="0" class="active"
+                                aria-current="true" aria-label="Image 1"></button>
+                            <button type="button" data-bs-target="#tigreCarousel" data-bs-slide-to="1"
+                                aria-label="Image 2"></button>
+                            <button type="button" data-bs-target="#tigreCarousel" data-bs-slide-to="2"
+                                aria-label="Image 3"></button>
+                        </div>
+
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./img/tigre_1.jpg" class="d-block w-100" alt="tigre 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/tigre_2.jpg" class="d-block w-100" alt="tigre 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/tigre_3.jpg" class="d-block w-100" alt="tigre 3">
+                            </div>
+                        </div>
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#tigreCarousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#tigreCarousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const handleLogin = () => {
+            console.log("Email : " + document.getElementById("login-email").value);
+            console.log("Password : " + document.getElementById("login-password").value);
+        };
+        document.getElementById("login-button").addEventListener("click", handleLogin);
+
+        const handleRegister = () => {
+            console.log("Email : " + document.getElementById("register-email").value);
+            console.log("Password : " + document.getElementById("register-password").value);
+            console.log("Retype Password : " + document.getElementById("register-retype-password").value);
+        };
+        document.getElementById("register-button").addEventListener("click", handleRegister);
+    </script>
+</body>
+
+</html>
